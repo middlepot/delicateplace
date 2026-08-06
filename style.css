@@ -119,3 +119,133 @@ body {
     transform: scale(1.03);
     filter: brightness(1.05);
 }
+
+/* =========================================
+   ESTILOS ESPECÍFICOS DA PÁGINA ABOUT
+   ========================================= */
+
+/* Permite rolagem caso o texto da caixa cresça muito */
+body:has(.about-layout) {
+    overflow-y: auto;
+    overflow-x: hidden;
+}
+
+/* Reposiciona a logo para ficar no topo na página about */
+.about-logo {
+    top: 18%;
+    transform: translate(-50%, -50%) scale(0.6);
+}
+
+/* Wrapper central para a caixa de conteúdo */
+.about-center-wrapper {
+    position: absolute;
+    top: 35%;
+    /* Começa logo abaixo da logo e cresce apenas para baixo */
+    left: 50%;
+    transform: translateX(-50%);
+    margin-bottom: 10vh;
+    /* Garante que tenha espaço de respiro no final da página se crescer muito */
+    width: 60vh;
+    /* O width em vh que você definiu fica no wrapper */
+    max-width: 80vw;
+    /* Limite de segurança! Impede que corte no celular */
+    z-index: 10;
+}
+
+/* A caixa principal que estica verticalmente */
+.about-content-box {
+    width: 100%;
+    max-height: 60vh;
+    /* Limite de expansão para evitar deformação */
+    overflow-y: auto;
+    /* Permite rolagem interna do texto */
+    scrollbar-color: #e2d5d0 transparent;
+    /* Firefox: cor do polegar e trilha */
+
+    /* Configuração da borda (borders.png) */
+    border: 60px solid transparent;
+    border-image-source: url('img/borders.png');
+    border-image-slice: 21.5% fill;
+    border-image-repeat: round;
+
+    /* Fundo repetitivo (repeat.png) */
+    background-image: url('img/repeat.png');
+    background-repeat: repeat;
+    background-clip: content-box;
+    /* Faz o fundo respeitar o padding, criando o recuo! */
+
+    text-align: center;
+    color: #a38c8c;
+    font-size: 1.2rem;
+    line-height: 1.6;
+}
+
+/* Botão inclinado no topo esquerdo da caixa */
+.about-badge {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 35%;
+    height: auto;
+    /* translate usa o próprio tamanho do botão para deslocar, garantindo proporção perfeita independente da largura/altura da tela */
+    transform: translate(-25%, -25%) rotate(-10deg);
+    z-index: 12;
+}
+
+/* Enfeites flutuantes laterais */
+.about-side-left {
+    position: absolute;
+    right: 110%;
+    /* Empurra estritamente para fora da borda esquerda da caixa */
+    margin-right: 3vw;
+    top: 50%;
+    transform: translateY(-50%);
+    width: 25%;
+}
+
+.about-side-right {
+    position: absolute;
+    left: 110%;
+    /* Empurra estritamente para fora da borda direita da caixa */
+    margin-left: 3vw;
+    top: 50%;
+    transform: translateY(-50%);
+    width: 25%;
+}
+
+/* Scrollbar decorativa (Chrome/Safari/Edge) */
+.about-content-box::-webkit-scrollbar {
+    width: 10px;
+}
+
+.about-content-box::-webkit-scrollbar-track {
+    background-color: transparent;
+    /* Tom rosa-creme claro, como o fundo da página */
+    border-radius: 10px;
+}
+
+.about-content-box::-webkit-scrollbar-thumb {
+    background-color: #e2d5d0;
+    border-radius: 10px;
+    /* Borda fina que cria um efeito de recuo suave */
+}
+
+.about-content-box::-webkit-scrollbar-thumb:hover {
+    background-color: #e2d5d0;
+    /* Escurece levemente no hover */
+}
+
+/* =========================================
+   RESPONSIVIDADE (MOBILE)
+   ========================================= */
+@media (max-width: 768px) {
+
+    /* Aumenta a logo na página about em telas pequenas */
+    .about-logo {
+        transform: translate(-50%, -50%) scale(1);
+    }
+
+    .about-center-wrapper {
+        top: 30%;
+    }
+}
