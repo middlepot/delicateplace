@@ -6,6 +6,22 @@
 
 html,
 body {
+    cursor: url(img/cursor.png), progress;
+
+    a:hover {
+        cursor: url(img/cursorh.png), progress;
+    }
+
+    ::selection {
+        text-shadow: 0 0 2px #cec1bb;
+        color: #cec1bb
+    }
+
+    ::-moz-selection {
+        text-shadow: 0 0 2px #cec1bb;
+        color: #cec1bb
+    }
+
     width: 100%;
     height: 100%;
     overflow: hidden;
