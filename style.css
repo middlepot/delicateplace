@@ -33,7 +33,7 @@ body {
 .top-decorations {
     position: absolute;
     width: 95%;
-    top: 50%;
+    top: 45%;
     left: 50%;
     transform: translate(-50%, -130%);
     /* Fica no centro horizontal, posicionado logo acima do logo.png */
@@ -55,7 +55,7 @@ body {
 /* Container para a logo e a ursinha (animation.gif) */
 .logo-container {
     position: absolute;
-    top: 50%;
+    top: 45%;
     left: 50%;
     transform: translate(-50%, -50%);
     /* Exatamente no centro da tela */
@@ -81,7 +81,7 @@ body {
     z-index: 2;
     /* Centraliza a ursinha sobre a logo. 
        Dependendo de como a logo está cortada, talvez precise de pequenos ajustes finos aqui (top/margin) */
-    top: 50%;
+    top: 45%;
     left: 56.5%;
     /* Levemente descentralizada para a direita */
     transform: translate(-50%, -50%);
@@ -90,15 +90,16 @@ body {
 /* Botões inferiores (Navegação) */
 .nav-links {
     position: absolute;
-    bottom: 5vh;
+    width: 95%;
+    top: 45%;
     left: 50%;
-    transform: translateX(-50%);
-    /* Centraliza na parte inferior */
-    width: 80%;
-    max-width: 1000px;
+    transform: translate(-50%, 65%);
+    /* Fica no centro horizontal, posicionado logo abaixo do logo.png */
+    width: 65%;
     display: flex;
     justify-content: space-between;
     align-items: center;
+    z-index: 0;
 }
 
 .nav-item {

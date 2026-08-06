@@ -27,5 +27,17 @@
             <a href="updates.html" class="nav-item"><img src="img/button_updates.png" alt="Updates"></a>
         </div>
     </div>
+
+    <script>
+        let isState1 = true;
+        const leftBtn = document.querySelector('.top-left');
+        const rightBtn = document.querySelector('.top-right');
+
+        setInterval(() => {
+            isState1 = !isState1;
+            leftBtn.src = isState1 ? 'img/buttons1_left_index.png' : 'img/buttons2_left_index.png';
+            rightBtn.src = isState1 ? 'img/buttons1_right_index.png' : 'img/buttons2_right_index.png';
+        }, 500);
+    </script>
 </body>
 </html>
