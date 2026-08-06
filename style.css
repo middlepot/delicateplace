@@ -1,0 +1,120 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html,
+body {
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
+    /* Evita barras de rolagem para manter o visual de quadro estático */
+    background-image: url('img/bg.png');
+    background-size: 100% 100%;
+    /* Estica para caber exatamente na tela */
+    background-position: center;
+    background-repeat: no-repeat;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-family: sans-serif;
+}
+
+/* O container principal mantém a proporção e os itens alinhados */
+.container {
+    width: 100vw;
+    height: 100vh;
+    position: relative;
+    /* Funciona como âncora para os itens absolutos */
+}
+
+/* Enfeites do topo (botões soltos) */
+.top-decorations {
+    position: absolute;
+    width: 95%;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -130%);
+    /* Fica no centro horizontal, posicionado logo acima do logo.png */
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    z-index: 0;
+    pointer-events: none;
+}
+
+.top-left,
+.top-right {
+    width: 35%;
+    /* Usando porcentagem para que encolha junto com a tela */
+    height: auto;
+    object-fit: contain;
+}
+
+/* Container para a logo e a ursinha (animation.gif) */
+.logo-container {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    /* Exatamente no centro da tela */
+    width: 90vw;
+    /* Estendido para ocupar 90% do espaço horizontal */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.logo {
+    width: 100%;
+    height: auto;
+    object-fit: contain;
+    z-index: 1;
+}
+
+.bear {
+    position: absolute;
+    width: 20%;
+    /* Ursinha proporcional à logo */
+    height: auto;
+    z-index: 2;
+    /* Centraliza a ursinha sobre a logo. 
+       Dependendo de como a logo está cortada, talvez precise de pequenos ajustes finos aqui (top/margin) */
+    top: 50%;
+    left: 56.5%;
+    /* Levemente descentralizada para a direita */
+    transform: translate(-50%, -50%);
+}
+
+/* Botões inferiores (Navegação) */
+.nav-links {
+    position: absolute;
+    bottom: 5vh;
+    left: 50%;
+    transform: translateX(-50%);
+    /* Centraliza na parte inferior */
+    width: 80%;
+    max-width: 1000px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.nav-item {
+    width: 30%;
+    /* Garante que os 3 fiquem lado a lado (30% * 3 = 90%), encolhendo ao invés de empilhar */
+    transition: transform 0.3s ease, filter 0.3s ease;
+}
+
+.nav-item img {
+    width: 100%;
+    height: auto;
+    object-fit: contain;
+}
+
+/* Efeito sutil ao passar o mouse */
+.nav-item:hover {
+    transform: scale(1.03);
+    filter: brightness(1.05);
+}
