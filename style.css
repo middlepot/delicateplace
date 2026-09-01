@@ -173,7 +173,6 @@
         max-height: 60vh;
         overflow-y: auto;
         scrollbar-color: #e2d5d0 transparent;
-
         border: 60px solid transparent;
         border-image-source: url('img/borders.png');
         border-image-slice: 21.5% fill;
@@ -181,7 +180,6 @@
         background-color: #f2efed;
         background-clip: padding-box;
         padding: 10%;
-
         font-size: 16px;
         font-family: Lora,
             serif;
