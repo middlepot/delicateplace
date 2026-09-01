@@ -4,264 +4,245 @@
     box-sizing: border-box;
 }
 
-html,
-body {
-    cursor: url(img/cursor.png), progress;
+@import url('https://fonts.googleapis.com/css2?family=Lora:ital,wght@0,400..700;1,400..700');
+
+:root {
+    --body-font: 'Lora', serif;
+
+    html,
+    body {
+        cursor: url(img/cursor.png), progress;
+
+        a:hover {
+            cursor: url(img/cursorh.png), progress;
+        }
+
+        ::selection {
+            text-shadow: 0 0 2px #cec1bb;
+            color: #cec1bb
+        }
+
+        ::-moz-selection {
+            text-shadow: 0 0 2px #cec1bb;
+            color: #cec1bb
+        }
+
+        width: 100%;
+        height: 100%;
+        overflow: hidden;
+        background-image: url('img/bg.png');
+        background-size: 100% 100%;
+        background-position: center;
+        background-repeat: no-repeat;
+        background-color: #f2efed;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        font-size: 16px;
+        font-family: Lora,
+        serif;
+        line-height: 1.4;
+        letter-spacing: 0.6px;
+        text-align: justify;
+        color: #9e8d8d;
+    }
+
+    i {
+        text-decoration: none;
+        color: #C0ADA9;
+        text-shadow: 0 0 2px #cec1bb;
+    }
+
+    a {
+        text-decoration: none;
+        color: #C0ADA9;
+        text-shadow: 0 0 2px #cec1bb;
+    }
 
     a:hover {
-        cursor: url(img/cursorh.png), progress;
+        color: #d9cccc;
+        text-shadow: 0 0 2px #e8e1e1;
     }
 
-    ::selection {
-        text-shadow: 0 0 2px #cec1bb;
-        color: #cec1bb
+    .container {
+        width: 100vw;
+        height: 100vh;
+        position: relative;
     }
 
-    ::-moz-selection {
-        text-shadow: 0 0 2px #cec1bb;
-        color: #cec1bb
+    .top-decorations {
+        position: absolute;
+        width: 95%;
+        top: 45%;
+        left: 50%;
+        transform: translate(-50%, -130%);
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        z-index: 0;
+        pointer-events: none;
     }
 
-    width: 100%;
-    height: 100%;
-    overflow: hidden;
-    /* Evita barras de rolagem para manter o visual de quadro estático */
-    background-image: url('img/bg.png');
-    background-size: 100% 100%;
-    /* Estica para caber exatamente na tela */
-    background-position: center;
-    background-repeat: no-repeat;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    font-family: sans-serif;
-}
+    .top-left,
+    .top-right {
+        width: 35%;
+        height: auto;
+        object-fit: contain;
+    }
 
-/* O container principal mantém a proporção e os itens alinhados */
-.container {
-    width: 100vw;
-    height: 100vh;
-    position: relative;
-    /* Funciona como âncora para os itens absolutos */
-}
+    .logo-container {
+        position: absolute;
+        top: 45%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        width: 90vw;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
 
-/* Enfeites do topo (botões soltos) */
-.top-decorations {
-    position: absolute;
-    width: 95%;
-    top: 45%;
-    left: 50%;
-    transform: translate(-50%, -130%);
-    /* Fica no centro horizontal, posicionado logo acima do logo.png */
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    z-index: 0;
-    pointer-events: none;
-}
+    .logo {
+        width: 100%;
+        height: auto;
+        object-fit: contain;
+        z-index: 1;
+    }
 
-.top-left,
-.top-right {
-    width: 35%;
-    /* Usando porcentagem para que encolha junto com a tela */
-    height: auto;
-    object-fit: contain;
-}
+    .bear {
+        position: absolute;
+        width: 20%;
+        height: auto;
+        z-index: 2;
+        top: 45%;
+        left: 56.5%;
+        transform: translate(-50%, -50%);
+    }
 
-/* Container para a logo e a ursinha (animation.gif) */
-.logo-container {
-    position: absolute;
-    top: 45%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-    /* Exatamente no centro da tela */
-    width: 90vw;
-    /* Estendido para ocupar 90% do espaço horizontal */
-    display: flex;
-    justify-content: center;
-    align-items: center;
-}
+    .nav-links {
+        position: absolute;
+        width: 95%;
+        top: 45%;
+        left: 50%;
+        transform: translate(-50%, 65%);
+        width: 65%;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        z-index: 0;
+    }
 
-.logo {
-    width: 100%;
-    height: auto;
-    object-fit: contain;
-    z-index: 1;
-}
+    .nav-item {
+        width: 30%;
+        transition: transform 0.3s ease, filter 0.3s ease;
+    }
 
-.bear {
-    position: absolute;
-    width: 20%;
-    /* Ursinha proporcional à logo */
-    height: auto;
-    z-index: 2;
-    /* Centraliza a ursinha sobre a logo. 
-       Dependendo de como a logo está cortada, talvez precise de pequenos ajustes finos aqui (top/margin) */
-    top: 45%;
-    left: 56.5%;
-    /* Levemente descentralizada para a direita */
-    transform: translate(-50%, -50%);
-}
+    .nav-item img {
+        width: 100%;
+        height: auto;
+        object-fit: contain;
+    }
 
-/* Botões inferiores (Navegação) */
-.nav-links {
-    position: absolute;
-    width: 95%;
-    top: 45%;
-    left: 50%;
-    transform: translate(-50%, 65%);
-    /* Fica no centro horizontal, posicionado logo abaixo do logo.png */
-    width: 65%;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    z-index: 0;
-}
+    .nav-item:hover {
+        transform: scale(1.03);
+        filter: brightness(1.05);
+    }
 
-.nav-item {
-    width: 30%;
-    /* Garante que os 3 fiquem lado a lado (30% * 3 = 90%), encolhendo ao invés de empilhar */
-    transition: transform 0.3s ease, filter 0.3s ease;
-}
+    body:has(.about-layout) {
+        overflow-y: auto;
+        overflow-x: hidden;
+    }
 
-.nav-item img {
-    width: 100%;
-    height: auto;
-    object-fit: contain;
-}
-
-/* Efeito sutil ao passar o mouse */
-.nav-item:hover {
-    transform: scale(1.03);
-    filter: brightness(1.05);
-}
-
-/* =========================================
-   ESTILOS ESPECÍFICOS DA PÁGINA ABOUT
-   ========================================= */
-
-/* Permite rolagem caso o texto da caixa cresça muito */
-body:has(.about-layout) {
-    overflow-y: auto;
-    overflow-x: hidden;
-}
-
-/* Reposiciona a logo para ficar no topo na página about */
-.about-logo {
-    top: 18%;
-    transform: translate(-50%, -50%) scale(0.6);
-}
-
-/* Wrapper central para a caixa de conteúdo */
-.about-center-wrapper {
-    position: absolute;
-    top: 35%;
-    /* Começa logo abaixo da logo e cresce apenas para baixo */
-    left: 50%;
-    transform: translateX(-50%);
-    margin-bottom: 10vh;
-    /* Garante que tenha espaço de respiro no final da página se crescer muito */
-    width: 60vh;
-    /* O width em vh que você definiu fica no wrapper */
-    max-width: 80vw;
-    /* Limite de segurança! Impede que corte no celular */
-    z-index: 10;
-}
-
-/* A caixa principal que estica verticalmente */
-.about-content-box {
-    width: 100%;
-    max-height: 60vh;
-    /* Limite de expansão para evitar deformação */
-    overflow-y: auto;
-    /* Permite rolagem interna do texto */
-    scrollbar-color: #e2d5d0 transparent;
-    /* Firefox: cor do polegar e trilha */
-
-    /* Configuração da borda (borders.png) */
-    border: 60px solid transparent;
-    border-image-source: url('img/borders.png');
-    border-image-slice: 21.5% fill;
-    border-image-repeat: round;
-
-    /* Fundo repetitivo (repeat.png) */
-    background-image: url('img/repeat.png');
-    background-repeat: repeat;
-    background-clip: content-box;
-    /* Faz o fundo respeitar o padding, criando o recuo! */
-
-    text-align: center;
-    color: #a38c8c;
-    font-size: 1.2rem;
-    line-height: 1.6;
-}
-
-/* Botão inclinado no topo esquerdo da caixa */
-.about-badge {
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 35%;
-    height: auto;
-    /* translate usa o próprio tamanho do botão para deslocar, garantindo proporção perfeita independente da largura/altura da tela */
-    transform: translate(-25%, -25%) rotate(-10deg);
-    z-index: 12;
-}
-
-/* Enfeites flutuantes laterais */
-.about-side-left {
-    position: absolute;
-    right: 110%;
-    /* Empurra estritamente para fora da borda esquerda da caixa */
-    margin-right: 3vw;
-    top: 50%;
-    transform: translateY(-50%);
-    width: 25%;
-}
-
-.about-side-right {
-    position: absolute;
-    left: 110%;
-    /* Empurra estritamente para fora da borda direita da caixa */
-    margin-left: 3vw;
-    top: 50%;
-    transform: translateY(-50%);
-    width: 25%;
-}
-
-/* Scrollbar decorativa (Chrome/Safari/Edge) */
-.about-content-box::-webkit-scrollbar {
-    width: 10px;
-}
-
-.about-content-box::-webkit-scrollbar-track {
-    background-color: transparent;
-    /* Tom rosa-creme claro, como o fundo da página */
-    border-radius: 10px;
-}
-
-.about-content-box::-webkit-scrollbar-thumb {
-    background-color: #e2d5d0;
-    border-radius: 10px;
-    /* Borda fina que cria um efeito de recuo suave */
-}
-
-.about-content-box::-webkit-scrollbar-thumb:hover {
-    background-color: #e2d5d0;
-    /* Escurece levemente no hover */
-}
-
-/* =========================================
-   RESPONSIVIDADE (MOBILE)
-   ========================================= */
-@media (max-width: 768px) {
-
-    /* Aumenta a logo na página about em telas pequenas */
     .about-logo {
-        transform: translate(-50%, -50%) scale(1);
+        top: 18%;
+        transform: translate(-50%, -50%) scale(0.6);
     }
 
     .about-center-wrapper {
-        top: 30%;
+        position: absolute;
+        top: 35%;
+        left: 50%;
+        transform: translateX(-50%);
+        margin-bottom: 10vh;
+        width: 60vh;
+        max-width: 80vw;
+        z-index: 10;
     }
-}
+
+    .about-content-box {
+        width: 100%;
+        max-height: 60vh;
+        overflow-y: auto;
+        scrollbar-color: #e2d5d0 transparent;
+
+        border: 60px solid transparent;
+        border-image-source: url('img/borders.png');
+        border-image-slice: 21.5% fill;
+        border-image-repeat: round;
+        background-color: #f2efed;
+        background-clip: padding-box;
+        padding: 10%;
+
+        font-size: 16px;
+        font-family: Lora,
+            serif;
+        line-height: 1.4;
+        letter-spacing: 0.6px;
+        text-align: justify;
+    }
+
+    .about-badge {
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 35%;
+        height: auto;
+        transform: translate(-35%, -35%) rotate(-10deg);
+        z-index: 12;
+    }
+
+    .about-side-left {
+        position: absolute;
+        right: 110%;
+        margin-right: 3vw;
+        top: 50%;
+        transform: translateY(-50%);
+        width: 25%;
+    }
+
+    .about-side-right {
+        position: absolute;
+        left: 110%;
+        margin-left: 3vw;
+        top: 50%;
+        transform: translateY(-50%);
+        width: 25%;
+    }
+
+    .about-content-box::-webkit-scrollbar {
+        width: 10px;
+    }
+
+    .about-content-box::-webkit-scrollbar-track {
+        background-color: transparent;
+        border-radius: 10px;
+    }
+
+    .about-content-box::-webkit-scrollbar-thumb {
+        background-color: #e2d5d0;
+        border-radius: 10px;
+    }
+
+    .about-content-box::-webkit-scrollbar-thumb:hover {
+        background-color: #e2d5d0;
+    }
+
+    @media (max-width: 768px) {
+
+        .about-logo {
+            transform: translate(-50%, -50%) scale(1);
+        }
+
+        .about-center-wrapper {
+            top: 30%;
+        }
+    }
