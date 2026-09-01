@@ -38,7 +38,7 @@
         display: flex;
         justify-content: center;
         align-items: center;
-        font-size: 16px;
+        font-size: 1rem;
         font-family: Lora,
         serif;
         line-height: 1.4;
@@ -180,7 +180,7 @@
         background-color: #f2efed;
         background-clip: padding-box;
         padding: 10%;
-        font-size: 16px;
+        font-size: 1rem;
         font-family: Lora,
             serif;
         line-height: 1.4;
