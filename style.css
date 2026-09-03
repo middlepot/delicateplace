@@ -39,8 +39,7 @@
         justify-content: center;
         align-items: center;
         font-size: 1rem;
-        font-family: Lora,
-        serif;
+        font-family: 'Lora', serif;
         line-height: 1.4;
         letter-spacing: 0.6px;
         text-align: justify;
@@ -72,8 +71,8 @@
 
     .top-decorations {
         position: absolute;
-        width: 95%;
-        top: 45%;
+        width: 70%;
+        top: 40%;
         left: 50%;
         transform: translate(-50%, -130%);
         display: flex;
@@ -102,7 +101,7 @@
     }
 
     .logo {
-        width: 100%;
+        width: 80%;
         height: auto;
         object-fit: contain;
         z-index: 1;
@@ -110,21 +109,20 @@
 
     .bear {
         position: absolute;
-        width: 20%;
+        width: 15%;
         height: auto;
         z-index: 2;
-        top: 45%;
-        left: 56.5%;
+        top: 50%;
+        left: 55%;
         transform: translate(-50%, -50%);
     }
 
     .nav-links {
         position: absolute;
-        width: 95%;
-        top: 45%;
+        width: 45%;
+        top: 48%;
         left: 50%;
         transform: translate(-50%, 65%);
-        width: 65%;
         display: flex;
         justify-content: space-between;
         align-items: center;
@@ -177,13 +175,15 @@
         border-image-source: url('img/borders.png');
         border-image-slice: 21.5% fill;
         border-image-repeat: round;
+        background-image: url('img/repeat.png');
+        background-repeat: repeat;
+        background-size: cover;
         background-color: #f2efed;
         background-clip: padding-box;
         padding: 10%;
         font-size: 1rem;
-        font-family: Lora,
-            serif;
-        line-height: 1.4;
+        font-family: 'Lora', serif;
+        line-height: 1;
         letter-spacing: 0.6px;
         text-align: left;
     }
@@ -234,7 +234,31 @@
         background-color: #e2d5d0;
     }
 
+    .text-project {
+            width: 80%;
+    }
+
     @media (max-width: 768px) {
+
+            .logo {
+        width: 100%;
+    }
+
+    .bear {
+        width: 20%;
+        top: 50%;
+        left: 57%;
+    }
+
+    .nav-links {
+        width: 85%;
+        top: 45%;
+    }
+    
+    .top-decorations {
+        width: 90%;
+        top: 42%;
+    }
 
         .about-logo {
             top: 15%;
@@ -251,5 +275,9 @@
             border-image-source: url('img/borders.png');
             border-image-slice: 21.5% fill;
             border-image-repeat: round;
+        }
+        
+        .text-project {
+            width: 100%;
         }
     }
