@@ -250,7 +250,7 @@
 
     @media (max-width: 768px) {
 
-    .container {
+    .container.index-layout {
         top: -10vh;
     }
 
