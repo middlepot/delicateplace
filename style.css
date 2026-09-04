@@ -250,6 +250,10 @@
 
     @media (max-width: 768px) {
 
+    .container {
+        top: -10vh;
+    }
+
     .logo {
         width: 100%;
     }
@@ -286,7 +290,7 @@
     }
 
         .about-center-wrapper {
-            top: 25%;
+            top: 15%;
         }
 
         .about-content-box {
