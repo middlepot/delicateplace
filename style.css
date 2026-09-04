@@ -52,16 +52,19 @@
         text-shadow: 0 0 2px #cec1bb;
     }
 
-    a {
-        text-decoration: none;
-        color: #C0ADA9;
-        text-shadow: 0 0 2px #cec1bb;
-    }
+    a {  
+text-decoration: none;
+color: #C0ADA9;
+text-shadow: 0 0 2px #cec1bb;
+transition: 1s;
+	}
 
-    a:hover {
-        color: #d9cccc;
-        text-shadow: 0 0 2px #e8e1e1;
-    }
+	a:hover { 
+color: #d9cccc;
+text-shadow: 0 0 2px #e8e1e1;
+filter: blur(1px);
+transition: 1s;
+	}  
 
     .container {
         width: 100vw;
