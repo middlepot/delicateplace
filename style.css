@@ -105,6 +105,11 @@
         height: auto;
         object-fit: contain;
         z-index: 1;
+        transition: transform 0.3s ease, filter 0.3s ease;
+    }
+
+    .logo:hover {
+        transform: scale(1.02);
     }
 
     .bear {
@@ -142,7 +147,6 @@
 
     .nav-item:hover {
         transform: scale(1.03);
-        filter: brightness(1.05);
     }
 
     body:has(.about-layout) {
@@ -151,13 +155,28 @@
     }
 
     .about-logo {
-        top: 18%;
+        width: 280%;
+        top: 0;
         transform: translate(-50%, -50%) scale(0.6);
+        z-index: 15;
+    }
+
+    
+    .nav-links-about {
+        position: absolute;
+        width: 90%;
+        margin-top: -28%;
+        left: 50%;
+        transform: translate(-50%, 65%);
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        z-index: 0;
     }
 
     .about-center-wrapper {
         position: absolute;
-        top: 35%;
+        top: 25%;
         left: 50%;
         transform: translateX(-50%);
         margin-bottom: 10vh;
@@ -167,6 +186,7 @@
     }
 
     .about-content-box {
+        margin-top: 5vh;
         width: 100%;
         max-height: 60vh;
         overflow-y: auto;
@@ -186,16 +206,6 @@
         line-height: 1;
         letter-spacing: 0.6px;
         text-align: left;
-    }
-
-    .about-badge {
-        position: absolute;
-        top: 0;
-        left: 0;
-        width: 35%;
-        height: auto;
-        transform: translate(-35%, -35%) rotate(-10deg);
-        z-index: 12;
     }
 
     .about-side-left {
@@ -240,7 +250,7 @@
 
     @media (max-width: 768px) {
 
-            .logo {
+    .logo {
         width: 100%;
     }
 
@@ -259,17 +269,28 @@
         width: 90%;
         top: 42%;
     }
+    
+        .about-side-left {
+        display: none;
+    }
 
-        .about-logo {
-            top: 15%;
-            transform: translate(-50%, -50%) scale(1);
-        }
+    .about-side-right {
+        display: none;
+    }
+
+    .about-logo {
+        width: 180%;
+        top: 0;
+        transform: translate(-50%, -50%) scale(0.6);
+        z-index: 15;
+    }
 
         .about-center-wrapper {
             top: 25%;
         }
 
         .about-content-box {
+            margin-top: 2vh;
             font-size: 13px !important;
             border: 30px solid transparent;
             border-image-source: url('img/borders.png');
