@@ -123,7 +123,7 @@ transition: 1s;
     }
 
     .logo:hover {
-        transform: scale(1.02);
+        transform: scale(1.01);
     }
 
     .bear {
@@ -134,6 +134,11 @@ transition: 1s;
         top: 50%;
         left: 55%;
         transform: translate(-50%, -50%);
+        transition: transform 0.3s ease, filter 0.3s ease;
+    }
+    
+    .bear:hover{
+        transform: scale(1.02) translate(-50%, -55%);
     }
 
     .nav-links {
