@@ -81,8 +81,9 @@ transition: 1s;
 font-size:1.2rem;
 font-style: italic;
 font-weight: bold;
+letter-spacing:1px;
 text-decoration: none;
-color: #a89996;
+color: #b5a7a5;
 text-shadow: 1px 3px 0 #ded5d5, 1px 8px 5px #ede4e4;
 filter: blur(0.3px);
     }
