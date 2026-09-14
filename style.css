@@ -75,6 +75,14 @@ filter: blur(1px);
 transition: 1s;
 	}  
 
+    .wavy {
+    text-weight: normal;
+    text-decoration-line: underline;
+    text-decoration-style: wavy;
+    text-decoration-color: #d9d2d2;
+    text-underline-offset: 6px;
+}
+
     .title {
 font-size:1.2rem;
 font-style: italic;
