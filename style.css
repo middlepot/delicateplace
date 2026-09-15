@@ -135,6 +135,11 @@ text-shadow: 1px 3px 0 #ded5d5, 1px 8px 5px #ede4e4;
         transition: transform 0.3s ease, filter 0.3s ease;
     }
 
+    .construction {
+        object-fit: contain;
+        z-index: 1;
+    }
+
     .logo:hover {
         transform: scale(1.01);
     }
@@ -287,6 +292,11 @@ text-shadow: 1px 3px 0 #ded5d5, 1px 8px 5px #ede4e4;
     }
 
     .logo {
+        width: 100%;
+    }
+    
+    .construction {
+        margin-top: 20vh;
         width: 100%;
     }
 
