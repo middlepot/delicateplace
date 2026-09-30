@@ -287,9 +287,9 @@ text-shadow: 1px 3px 0 #ded5d5, 1px 8px 5px #ede4e4;
 
     
         #roblox-avatar {
-        filter: sepia(5%) brightness(125%) saturate(70%) hue-rotate(-5deg) contrast(80%);
-        -webkit-filter: sepia(5%) brightness(125%) saturate(70%) hue-rotate(-5deg) contrast(80%);
-        -moz-filter: sepia(5%) brightness(125%) saturate(70%) hue-rotate(-5deg) contrast(80%);
+        filter: sepia(10%) brightness(125%) saturate(70%) contrast(80%);
+        -webkit-filter: sepia(10%) brightness(125%) saturate(70%) contrast(80%);
+        -moz-filter: sepia(10%) brightness(125%) saturate(70%) contrast(80%);
         }
 
     @media (max-width: 768px) {
