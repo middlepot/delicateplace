@@ -72,9 +72,7 @@
         const robloxAvatar = document.getElementById('roblox-avatar');
         const request = new Request(`https://thumbnails.roblox.com/v1/users/avatar?userIds=${userId}&size=420x420&format=Png&isCircular=false`, {
             method: 'GET',
-            headers: {
-                'Content-Type': 'application/json'
-            }
+            headers: {}
         });
         fetch(request)
             .then(response => response.json())
