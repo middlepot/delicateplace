@@ -73,7 +73,9 @@
         const request = new Request(`https://thumbnails.roblox.com/v1/users/avatar?userIds=${userId}&size=420x420&format=Png&isCircular=false`, {
             method: 'GET',
             headers: {
-                'content-type': 'application/x-www-form-urlencoded'
+                'content-type': 'application/x-www-form-urlencoded',
+                'Sec-Fetch-Mode': 'navigate',
+                'Sec-Fetch-Dest': 'json'
             }
         });
         fetch(request)
