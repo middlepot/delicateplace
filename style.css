@@ -354,4 +354,8 @@ text-shadow: 1px 3px 0 #ded5d5, 1px 8px 5px #ede4e4;
         .text-project {
             width: 100%;
         }
+        #roblox-avatar {
+        width:200px !important;
+        height:200px !important;
+        }
     }
