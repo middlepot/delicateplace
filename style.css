@@ -285,6 +285,13 @@ text-shadow: 1px 3px 0 #ded5d5, 1px 8px 5px #ede4e4;
             width: 80%;
     }
 
+    
+        #roblox-avatar {
+        filter: sepia(25%) brightness(120%) saturate(50%) hue-rotate(-20deg) contrast(80%);
+        -webkit-filter: sepia(25%) brightness(120%) saturate(50%) hue-rotate(-20deg) contrast(80%);
+        -moz-filter: sepia(25%) brightness(120%) saturate(50%) hue-rotate(-20deg) contrast(80%);
+        }
+
     @media (max-width: 768px) {
 
     .container.index-layout {
