@@ -42,7 +42,7 @@
                 <div align="center">
                 <br><br><img src="img/lace.png" style="width: 100%; height: auto;"><br><br><br>
                 <p class="title">my avatar ..</p><br><br>
-                <a href="https://www.roblox.com/users/10348009643/profile" target="_blank"><img id="roblox-avatar" style="width: 80%; height: auto;"></a>
+                <model-viewer loading="eager" style="overflow:hidden; --progress-bar-color:transparent; --progress-bar-height:0px; --poster-color:transparent; top:0px; left:0px; border:none; width:300px; height:300px;" src="https://files.catbox.moe/fdweq8.glb" environment-image="https://delicate.place/img/bg.png" poster="bunny-preview.png" exposure="1.2" disable-pan camera-orbit="-15deg 85deg" autoplay data-js-focus-visible camera-controls disable-zoom interaction-prompt="none"></model-viewer>
                 <br><br><br>
                 ꒰ <a class="link" href="https://www.roblox.com/users/10348009643/profile" target="_blank">@puflufs</a> ꒱ id : 10348009643
                 <br><br>
@@ -56,6 +56,8 @@
         </div>
     </div>
 
+<script type="module" src="https://unpkg.com/@google/model-viewer/dist/model-viewer.min.js"></script>
+<script nomodule src="https://unpkg.com/@google/model-viewer/dist/model-viewer-legacy.js"></script>
     <script>
         let isState1 = true;
         const leftBtn = document.querySelector('.about-side-left');
@@ -66,33 +68,6 @@
             leftBtn.src = isState1 ? 'img/buttons1_left_about.png' : 'img/buttons2_left_about.png';
             rightBtn.src = isState1 ? 'img/buttons1_right_about.png' : 'img/buttons2_right_about.png';
         }, 500);
-
-        // Fetch Roblox avatar image
-        const userId = 10348009643;
-        const robloxAvatar = document.getElementById('roblox-avatar');
-        const request = new Request(`https://thumbnails.roblox.com/v1/users/avatar?userIds=${userId}&size=420x420&format=Png&isCircular=false`, {
-            method: 'GET',
-            headers: {
-                'content-type': 'application/x-www-form-urlencoded',
-                'Sec-Fetch-Mode': 'navigate',
-                'Sec-Fetch-Dest': 'json'
-            }
-        });
-        fetch(request)
-            .then(response => response.json())
-            .then(json => {
-                return fetch(json.data[0]?.imageUrl)
-            })
-            .then(response => {
-                return response.blob();
-            })
-            .then(blob => {
-                const imageUrl = URL.createObjectURL(blob);
-                robloxAvatar.src = imageUrl;
-            })
-            .catch(error => {
-                console.error('Error fetching Roblox avatar:', error);
-            });
     </script>
 </body>
 
