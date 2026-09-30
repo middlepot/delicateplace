@@ -70,7 +70,13 @@
         // Fetch Roblox avatar image
         const userId = 10348009643;
         const robloxAvatar = document.getElementById('roblox-avatar');
-        fetch(`https://thumbnails.roblox.com/v1/users/avatar?userIds=${userId}&size=420x420&format=Png&isCircular=false`)
+        const request = new Request(`https://thumbnails.roblox.com/v1/users/avatar?userIds=${userId}&size=420x420&format=Png&isCircular=false`, {
+            method: 'GET',
+            headers: {
+                'Content-Type': 'application/json'
+            }
+        });
+        fetch(request)
             .then(response => response.json())
             .then(json => {
                 return fetch(json.data[0]?.imageUrl)
