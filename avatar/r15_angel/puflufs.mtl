@@ -1,18 +1,4 @@
-newmtl Rig1Mtl
-Material Color
-Ka 0.940601 0.948965 0.948965
-Kd 0.940601 0.948965 0.948965
-Ks 0.0590181 0.0595429 0.0595429 
-
-d 1
-
-Ns 0
-
-map_Ka Rig1_diff.png
-map_Kd Rig1_diff.png
-map_d Rig1_diff.png
-
-newmtl Handle8Mtl
+newmtl Handle7Mtl
 Material Color
 Ka 0.373615 0.368591 0.383775
 Kd 0.373615 0.368591 0.383775
@@ -22,9 +8,9 @@ d 1
 
 Ns 0
 
-map_Ka Handle8_diff.png
-map_Kd Handle8_diff.png
-map_d Handle8_diff.png
+map_Ka Handle7_diff.png
+map_Kd Handle7_diff.png
+map_d Handle7_diff.png
 
 newmtl Handle1Mtl
 Material Color
@@ -48,20 +34,6 @@ map_Ns Handle1_spec.png
 map_Ke Handle1_emap.png
 
 rbx_alphamode overlay
-
-newmtl Handle7Mtl
-Material Color
-Ka 0.373615 0.368591 0.383775
-Kd 0.373615 0.368591 0.383775
-Ks 0.0234425 0.0231273 0.02408 
-
-d 1
-
-Ns 0
-
-map_Ka Handle7_diff.png
-map_Kd Handle7_diff.png
-map_d Handle7_diff.png
 
 newmtl Handle6Mtl
 Material Color
@@ -148,6 +120,20 @@ map_Ke Handle4_emap.png
 
 rbx_alphamode overlay
 
+newmtl Handle8Mtl
+Material Color
+Ka 0.373615 0.368591 0.383775
+Kd 0.373615 0.368591 0.383775
+Ks 0.0234425 0.0231273 0.02408 
+
+d 1
+
+Ns 0
+
+map_Ka Handle8_diff.png
+map_Kd Handle8_diff.png
+map_d Handle8_diff.png
+
 newmtl Handle5Mtl
 Material Color
 Ka 0.373615 0.368591 0.383775
@@ -162,18 +148,6 @@ map_Ka Handle5_diff.png
 map_Kd Handle5_diff.png
 map_d Handle5_diff.png
 
-newmtl Rig14Mtl
-Material Color
-Ka 0.940601 0.948965 0.948965
-Kd 0.940601 0.948965 0.948965
-Ks 0.0811499 0.0818715 0.0818715 
-
-d 1
-
-Ns 255
-
-rbx_alphamode overlay
-
 newmtl Handle9Mtl
 Material Color
 Ka 0.373615 0.368591 0.383775
@@ -187,4 +161,30 @@ Ns 0
 map_Ka Handle9_diff.png
 map_Kd Handle9_diff.png
 map_d Handle9_diff.png
+
+newmtl Rig1Mtl
+Material Color
+Ka 0.940601 0.948965 0.948965
+Kd 0.940601 0.948965 0.948965
+Ks 0.0590181 0.0595429 0.0595429 
+
+d 1
+
+Ns 0
+
+map_Ka Rig1_diff.png
+map_Kd Rig1_diff.png
+map_d Rig1_diff.png
+
+newmtl Rig14Mtl
+Material Color
+Ka 0.940601 0.948965 0.948965
+Kd 0.940601 0.948965 0.948965
+Ks 0.0811499 0.0818715 0.0818715 
+
+d 1
+
+Ns 255
+
+rbx_alphamode overlay
 
